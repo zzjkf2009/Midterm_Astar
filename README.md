@@ -1,5 +1,5 @@
 # Acme-Robotics-Project
-[![Build Status](https://travis-ci.org/zzjkf2009/Midterm Astar.svg?branch=master)](https://travis-ci.org/zzjkf2009/Midterm_Astar)
+[![Build Status](https://travis-ci.org/zzjkf2009/Midterm_Astar.svg?branch=master)](https://travis-ci.org/zzjkf2009/Midterm_Astar)
 
 [![Coverage Status](https://coveralls.io/repos/github/zzjkf2009/Midterm Astar/badge.svg?branch=master)](https://coveralls.io/github/zzjkf2009/Midterm_Astar?branch=master)
 
@@ -30,9 +30,11 @@ See at: https://docs.google.com/spreadsheets/d/13NoBAFPOcGcF7GGDcg21S123wpvR30cG
 ---
 ### Time log
 See at: https://docs.google.com/spreadsheets/d/1ps_eQjuyWZXQR849OhGhagHZZerNhdZ-mS-iOgC5uFA/edit#gid=0 (Public)
+
 ---
 ### Defect log
 See at: https://docs.google.com/spreadsheets/d/16HbVWjZSSKYlnzeiJM4OVrNRNsU8g1owlBgeu1AP18A/edit#gid=0 (Public)
+
 ---
 ## Prerequisites
 
@@ -59,8 +61,6 @@ Run as fellow:
 After the build process, run the demo Test program
 run:
 ```
-
-
 ./build/test/cpp-test
 ```
 
@@ -90,10 +90,9 @@ $ doxygen my_proj.conf
 ```
 ---
 ## Authors
- * David Pietrocola -Initial Framework- see at: git clone --recursive https://github.com/dpiet/cpp-boilerplate.git 
- * Zejiang Zeng -Contributor- 
+ * **David Pietrocola** *-Initial Framework-* see at: git clone --recursive https://github.com/dpiet/cpp-boilerplate.git 
+ * **Zejiang Zeng** *-Contributor-* 
 ---
 ## LICENSE
 ### See at
-
-https://github.com/zzjkf2009/Astar/master/LICENSE
+https://github.com/zzjkf2009/Midterm_Astar/master/LICENSE
