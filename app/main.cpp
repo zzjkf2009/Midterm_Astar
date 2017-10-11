@@ -9,10 +9,10 @@ int main()
    int x = 1;
    Map map;
 
-std::array<std::array<int, 10>, 10> map_info = map.getGridmap(x);
+Map::gridMatrix map_info = map.getGridmap(x);
 
 
-std::cout<<arr[1][1]<<std::endl;
+std::cout<<map_info[1][1]<<std::endl;
 
     return 0;
 }

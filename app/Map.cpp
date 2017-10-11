@@ -13,7 +13,7 @@
 
 
 Map::gridMatrix Map::getGridmap(const int index) {
-        std::array<std::array<int, 10>, 10> gridMap_1 =  {
+        Map::gridMatrix gridMap_1 =  {
         {
             {1,1,1,1,1,1,1,1,1,1},
             {1,1,0,0,0,0,0,0,1,1},
@@ -27,7 +27,7 @@ Map::gridMatrix Map::getGridmap(const int index) {
             {1,1,1,1,1,1,1,1,1,1}
           }
           };
-       std::array<std::array<int, 10>, 10> gridMap_2 = {
+       Map::gridMatrix gridMap_2 = {
          {
             {1,1,1,1,1,1,1,1,1,1},
             {1,1,0,0,0,0,0,0,0,0},
@@ -41,7 +41,7 @@ Map::gridMatrix Map::getGridmap(const int index) {
             {1,1,1,1,1,1,1,1,1,1}
           }
          };
-        std::array<std::array<int, 10>, 10> gridMap_3 =  {
+        Map::gridMatrix gridMap_3 =  {
           {
             {1,1,1,1,1,1,1,1,1,1},
             {1,0,1,1,1,1,1,1,0,1},
