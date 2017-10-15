@@ -12,6 +12,7 @@
 #include<vector>
 #include<stack>
 #include"Astar.hpp"
+#include"Map.hpp"
 #include<cmath>
 #include<utility>
 
@@ -31,7 +32,7 @@ bool Astar::isValid(const int& x, const int& y) {
 *@param  grid[10][10], coordinate x and y, int
 *@return boolean ture or false
 */
-bool Astar::isUnblocked(int grid[][COL], const int& x, const int& y) {
+bool Astar::isUnblocked(Map::gridMatrix grid, const int& x, const int& y) {
   if (grid[x][y] == 1)
     return true;
   else

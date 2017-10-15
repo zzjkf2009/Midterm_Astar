@@ -18,6 +18,7 @@
 #include<cmath>
 #include<cstring>
 #include<utility>
+#include "Map.hpp"
 
 class Astar {
  public:
@@ -32,7 +33,7 @@ class Astar {
   typedef std::pair<int, int> coordinate;
   typedef std::pair<double, std::pair<int, int> > Open_list;
   bool isValid(const int& x, const int& y);
-  bool isUnblocked(int grid[][COL], const int& x, const int& y);
+  bool isUnblocked(Map::gridMatrix grid, const int& x, const int& y);
   bool isGoalNode(const int& x, const int& y, coordinate goal);
   double calculate_H(const int& x, const int& y, coordinate goal);
   std::stack<coordinate> GeneratePath(node nodepath[][COL], coordinate goal);
