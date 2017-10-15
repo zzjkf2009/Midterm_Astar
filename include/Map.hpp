@@ -10,15 +10,16 @@
 #ifndef INCLUDE_MAP_H_
 #define INCLUDE_MAP_H_
 
-#include"Astar.hpp"
+
 #include<utility>
 #include<array>
 class Map{
  public:
 typedef std::array<std::array<int, 10>, 10> gridMatrix;
+typedef std::pair<int, int> coordinate;
 gridMatrix getGridmap(const int index);
-Astar::coordinate SetStart(const int& x, const int& y);
-Astar::coordinate SetGoal(const int& x, const int& y);
+coordinate SetStart(const int& x, const int& y);
+coordinate SetGoal(const int& x, const int& y);
 };
 
 #endif  // INCLUDE_MAP_H_

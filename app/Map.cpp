@@ -8,7 +8,6 @@
 */
 
 #include "Map.hpp"
-#include "Astar.hpp"
 #include<array>
 
 
@@ -35,7 +34,7 @@ Map::gridMatrix Map::getGridmap(const int index) {
             {0,0,0,0,0,0,0,0,1,1},
             {1,1,1,1,1,1,1,1,1,1},
             {1,1,0,0,0,0,0,0,0,0},
-            {1,1,1,1,1,1,1,0,1,1},
+            {1,1,1,1,1,1,1,1,1,1},
             {0,0,0,0,0,0,0,0,1,1},
             {1,1,1,0,0,0,0,1,1,1},
             {1,1,1,1,1,1,1,1,1,1}
@@ -55,7 +54,20 @@ Map::gridMatrix Map::getGridmap(const int index) {
             {1,1,1,1,1,1,1,1,1,1}
           }
            };
-
+           Map::gridMatrix gridMap_4 =  {
+             {
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {0,0,0,0,0,0,0,0,0,0},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1},
+               {1,1,1,1,1,1,1,1,1,1}
+             }
+              };
          switch (index) {
            case 1 :
                 return gridMap_1;
@@ -66,8 +78,11 @@ Map::gridMatrix Map::getGridmap(const int index) {
            case 3 :
                 return gridMap_3;
                 break;
+           case 4:
+                return gridMap_4;
+                break;
            default :
-            return  gridMap_1;
+                return  gridMap_1;
          }
 }
 
@@ -81,7 +96,7 @@ Map::gridMatrix Map::getGridmap(const int index) {
 *@param x and y, both are int, which represent the location of the start node
 *@return coordinate pair<x,y>
 */
-Astar::coordinate Map::SetStart(const int& x, const int& y) {
+Map::coordinate Map::SetStart(const int& x, const int& y) {
   return std::make_pair(x, y);
 }
 /**
@@ -89,6 +104,6 @@ Astar::coordinate Map::SetStart(const int& x, const int& y) {
 *@param two integars x and y
 *@return coordinate pair<x,y>
 */
-Astar::coordinate Map::SetGoal(const int& x, const int& y) {
+Map::coordinate Map::SetGoal(const int& x, const int& y) {
   return std::make_pair(x, y);
 }
