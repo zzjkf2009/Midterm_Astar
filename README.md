@@ -40,21 +40,28 @@ See at: https://docs.google.com/spreadsheets/d/16HbVWjZSSKYlnzeiJM4OVrNRNsU8g1ow
 
 
 ---
-## Installing
+## 
 
 ---
-## Build
+## Installation and Build
 
 Run as fellow:
 ```
+* git clone --recursive https://github.com/zzjkf2009/Midterm_Astar.git
+* cd Midterm_Astar
+* git clone https://github.com/opencv/opencv.git
 * mkdir build
 * cd build
 * cmake ..
 * make
 ```
 ---
-## Running and tests
-
+## Running and Demo
+run
+```
+cd build
+./app/shepp-app
+```
 
 ---
 ## Test
@@ -63,14 +70,12 @@ run:
 ```
 ./build/test/cpp-test
 ```
-
----
-## Installation
-- Checkout the repo (and submodules)
-```
-$ git clone --recursive https://github.com/zzjkf2009/Astar.git
-```
-
+* gridMap1
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap1.gif)
+* gridMap2
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap2.gif)
+* gridMap3
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap3.gif)
 ---
 ## Documentation
 follow the instruction below to generate doxygen documentation
@@ -90,7 +95,7 @@ $ doxygen my_proj.conf
 ```
 ---
 ## Authors
- * **David Pietrocola** *-Initial Framework-* see at: git clone --recursive https://github.com/dpiet/cpp-boilerplate.git 
+ * **David Pietrocola** *-Initial Framework-* see at: https://github.com/dpiet/cpp-boilerplate.git 
  * **Zejiang Zeng** *-Contributor-* 
 ---
 ## LICENSE
