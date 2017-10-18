@@ -26,4 +26,6 @@ set(CMAKE_CXX_STANDARD 14)
 find_package( OpenCV REQUIRED )
 add_subdirectory(app)
 add_subdirectory(test)
-add_subdirectory(vendor/googletest/googletest)
+#add_subdirectory(vendor/googletest/googletest)
+add_subdirectory(vendor/googletest/googlemock)
+
