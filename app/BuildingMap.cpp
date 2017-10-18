@@ -3,26 +3,19 @@
 *@Copyright (C) 2017 Zejiang Zeng - All Rights Reserved
 * You may use, distribute and modify this code under the
 * terms of the MIT license, please visit :
- https://github.com/zzjkf2009/Acme-Robotics-Project/blob/master/LICENSE
+ https://github.com/zzjkf2009/Midterm_Astar/blob/master/LICENSE
 *@brief This source file defines two functions of <BuildingMap> class
 */
 #include <opencv2/opencv.hpp>
-#include<cmath>
 #include<stack>
 #include"BuildingMap.hpp"
-#include"Map.hpp"
-#include<utility>
 
-typedef std::pair<int, int> coordinate;
 
-/**
-*@brief Funtion that draw the grid map by using Opencv, walls will be black
-*       start and goal node are RGB[0,255,255]
-*@param int grid[][], start and goal coordinate
-*@return cv::Mat, an image show map including walls, start, goal node
-*/
-cv::Mat Buildingmap::drawGrids(Map::gridMatrix grid, coordinate start,
-                               coordinate goal) {
+
+
+
+cv::Mat Buildingmap::drawGrids(Buildingmap::gridMatrix grid, Buildingmap::coordinate start,
+                               Buildingmap::coordinate goal) {
   int image_x = ROW * 10;
   int image_y = COL * 10;
   cv::Mat Background = cv::Mat::zeros(image_x, image_y, CV_8UC3);
@@ -52,11 +45,7 @@ cv::Mat Buildingmap::drawGrids(Map::gridMatrix grid, coordinate start,
   return Background;
 }
 
-/**
-*@brief Funtion that draw the path node which are RGB[0,255,255]
-*@param Path nodes in stack <coordinate>, map image Background, in cv::Mat
-*@return cv::Mat, an image show map including walls, start, goal node anb path
-*/
+
 cv::Mat Buildingmap::drawPath(std::stack<coordinate> Path, cv::Mat Background) {
 // Define the codec and create VideoWriter object.The output is stored in 'outcpp.avi' file.
   cv::VideoWriter video("outcpp.avi",CV_FOURCC('M','J','P','G'),10, cv::Size(100,100));
