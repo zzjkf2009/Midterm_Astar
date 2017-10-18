@@ -72,15 +72,12 @@ cd build
 If there is a path, the path image and video will be generate in build derectory, meanwhile the path will be printed on the screen. 
 
 * gridMap1:
-
 ![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap1.gif)
 
 * gridMap2:
-
 ![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap2.gif)
 
 * gridMap3:
-
 ![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap3.gif)
 ---
 ## Test
@@ -129,3 +126,4 @@ This project is developed with the following tools:
 ---
 ## Need To Do and Update:
 * There are some issues with the gmock and probably the way I use virtual class is not correct,  the actual funcion of the virtual funtion is never been called. (17/10/2017)
+* Can't let Travis pass the build, since it can't find the OpenCV config file
