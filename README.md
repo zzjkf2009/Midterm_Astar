@@ -65,12 +65,13 @@ And then
 ```
 ---
 ## Running and Demo
-run
+Run:
 ```
 cd build
 ./app/shepp-app
 ```
 If there is a path, the path image and video will be generate in build derectory, meanwhile the path will be printed on the screen. 
+
 ---
 ## Test
 After the build process, run the demo Test program
@@ -84,6 +85,7 @@ run:
 ![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap2.gif)
 * gridMap3
 ![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap3.gif)
+
 ---
 ## Documentation
 follow the instruction below to generate doxygen documentation
