@@ -11,9 +11,6 @@
 #include"BuildingMap.hpp"
 
 
-
-
-
 cv::Mat Buildingmap::drawGrids(Buildingmap::gridMatrix grid, Buildingmap::coordinate start,
                                Buildingmap::coordinate goal) {
   int image_x = ROW * 10;
