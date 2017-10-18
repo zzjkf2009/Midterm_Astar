@@ -6,25 +6,19 @@
  https://github.com/zzjkf2009/Acme-Robotics-Project/blob/master/LICENSE
 *@brief This source file define a funtion of <WeightedAstar> calss
 */
-#include<iostream>
+
+
+#include<stack>
 #include<set>
 #include<vector>
-#include<stack>
+#include<cstring>
 #include"WeightedAstar.hpp"
 #include"Astar.hpp"
-#include"Map.hpp"
 #include<cmath>
-#include<cstring>
-#include<utility>
 
-/**
-*brief Funtion that generate a path from start to goal ndoe by using a
-*      path planing algorithm called WeightedAstar
-*@param int grid[10][10], a 10 by 10 grid map, locaion of start and goal
-*       node, weight , an integar
-*@return stack <coordinate> lolation of the path node
-*/
-std::stack<Astar::coordinate> WeightedAstar::WeightedA(Map::gridMatrix grid,
+
+
+std::stack<Astar::coordinate> WeightedAstar::WeightedA(gridMatrix grid,
                                                        coordinate start,
                                                        coordinate goal,
                                                        const int& weight) {
@@ -53,9 +47,9 @@ std::stack<Astar::coordinate> WeightedAstar::WeightedA(Map::gridMatrix grid,
   int i, j;
   for (i = 0; i < ROW; i++) {
     for (j = 0; j < COL; j++) {
-      nodeinfo[i][j].F = FLT_MAX;
-      nodeinfo[i][j].H = FLT_MAX;
-      nodeinfo[i][j].G = FLT_MAX;
+      nodeinfo[i][j].F = MAX;
+      nodeinfo[i][j].H = MAX;
+      nodeinfo[i][j].G = MAX;
       nodeinfo[i][j].parent_x = -1;
       nodeinfo[i][j].parent_y = -1;
     }
@@ -108,7 +102,7 @@ std::stack<Astar::coordinate> WeightedAstar::WeightedA(Map::gridMatrix grid,
             Gnew = nodeinfo[i][j].G + sqrt(k * k + l * l);
             Hnew = calculate_H(i + k, j + l, goal);
             Fnew = Gnew + weight * Hnew;
-            if (nodeinfo[i + k][j + l].F == FLT_MAX
+            if (nodeinfo[i + k][j + l].F == MAX
                 || nodeinfo[i + k][j + l].F > Fnew) {
               openList.insert(
                   std::make_pair(Fnew, std::make_pair(i + k, j + l)));
