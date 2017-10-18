@@ -32,16 +32,18 @@ See at: https://docs.google.com/spreadsheets/d/13NoBAFPOcGcF7GGDcg21S123wpvR30cG
 See at: https://docs.google.com/spreadsheets/d/1ps_eQjuyWZXQR849OhGhagHZZerNhdZ-mS-iOgC5uFA/edit#gid=0 (Public)
 
 ---
-### Defect log
-See at: https://docs.google.com/spreadsheets/d/16HbVWjZSSKYlnzeiJM4OVrNRNsU8g1owlBgeu1AP18A/edit#gid=0 (Public)
-
----
 ## Prerequisites
 
-
+* Cmake
 ---
-## 
-
+## Library
+* OpenCV
+OpenCV is an open source C++ library for image processing and computer vision, originally developed by Intel and now supported by Willow Garage. 
+It is a library of many inbuilt functions mainly aimed at real time image processing. Now it has several hundreds of image processing and computer vision algorithms which make developing advanced computer vision applications easy and efficient. More details see: https://docs.opencv.org/2.4/index.html
+* Gtest
+Google Test is a unit testing library for the C++ programming language, based on the xUnit architecture. More details cna be find at: https://github.com/google/googletest
+* Gmock
+Google Mock is an extension to Google Test for writing and using C++ mock classes. See the separate Google Mock documentation at https://github.com/google/googletest/blob/master/googlemock/README.md
 ---
 ## Installation and Build
 
@@ -49,7 +51,13 @@ Run as fellow:
 ```
 * git clone --recursive https://github.com/zzjkf2009/Midterm_Astar.git
 * cd Midterm_Astar
+```
+If OpenCV library is not cloned with the other file:
+```
 * git clone https://github.com/opencv/opencv.git
+```
+And then
+```
 * mkdir build
 * cd build
 * cmake ..
@@ -62,7 +70,7 @@ run
 cd build
 ./app/shepp-app
 ```
-
+If there is a path, the path image and video will be generate in build derectory, meanwhile the path will be printed on the screen. 
 ---
 ## Test
 After the build process, run the demo Test program
@@ -87,6 +95,7 @@ $ sudo apt-get install graphviz
 First, generate a project-specific congfiuration doc
 ```
 $ doxygen -g my_proj.conf 
+
 ```
 Then modify the congfiuration doc in text editor and specify the root directory that contains the project's source files.
 Last, run below to generate html and Latex format files
@@ -99,5 +108,16 @@ $ doxygen my_proj.conf
  * **Zejiang Zeng** *-Contributor-* 
 ---
 ## LICENSE
-### See at
-https://github.com/zzjkf2009/Midterm_Astar/master/LICENSE
+* See at https://github.com/zzjkf2009/Midterm_Astar/master/LICENSE
+---
+## Summary
+This project is developed with the following tools:
+* IDE (eclipse)
+* Vision Control (git)
+* Documentation (doxygen)
+* Continous Integration (github travis coveralls)
+* Unit test framework (Goolge test)
+* Code analisis (cpplint)
+* Debugging (Valgrind)
+* Application library (OpenCV)
+* Build framework (cmake,GCC)
