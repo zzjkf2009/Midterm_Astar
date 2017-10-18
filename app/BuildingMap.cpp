@@ -1,17 +1,17 @@
 /**
-*@file BuildingMap.cpp
-*@Copyright (C) 2017 Zejiang Zeng - All Rights Reserved
-* You may use, distribute and modify this code under the
-* terms of the MIT license, please visit :
+ *@file BuildingMap.cpp
+ *@Copyright (C) 2017 Zejiang Zeng - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the MIT license, please visit :
  https://github.com/zzjkf2009/Midterm_Astar/blob/master/LICENSE
-*@brief This source file defines two functions of <BuildingMap> class
-*/
+ *@brief This source file defines two functions of <BuildingMap> class
+ */
 #include <opencv2/opencv.hpp>
 #include<stack>
 #include"BuildingMap.hpp"
 
-
-cv::Mat Buildingmap::drawGrids(Buildingmap::gridMatrix grid, Buildingmap::coordinate start,
+cv::Mat Buildingmap::drawGrids(Buildingmap::gridMatrix grid,
+                               Buildingmap::coordinate start,
                                Buildingmap::coordinate goal) {
   int image_x = ROW * 10;
   int image_y = COL * 10;
@@ -42,10 +42,10 @@ cv::Mat Buildingmap::drawGrids(Buildingmap::gridMatrix grid, Buildingmap::coordi
   return Background;
 }
 
-
 cv::Mat Buildingmap::drawPath(std::stack<coordinate> Path, cv::Mat Background) {
 // Define the codec and create VideoWriter object.The output is stored in 'outcpp.avi' file.
-  cv::VideoWriter video("outcpp.avi",CV_FOURCC('M','J','P','G'),10, cv::Size(100,100));
+  cv::VideoWriter video("outcpp.avi", CV_FOURCC('M', 'J', 'P', 'G'), 10,
+                        cv::Size(100, 100));
   while (!Path.empty()) {
     std::pair<int, int> p = Path.top();
     int i = p.first;
@@ -62,3 +62,4 @@ cv::Mat Buildingmap::drawPath(std::stack<coordinate> Path, cv::Mat Background) {
   video.release();
   return Background;
 }
+

@@ -1,12 +1,11 @@
 /**
-*@file WeightedAstar.cpp
-*@Copyright (C) 2017 Zejiang Zeng - All Rights Reserved
-* You may use, distribute and modify this code under the
-* terms of the MIT license, please visit :
+ *@file WeightedAstar.cpp
+ *@Copyright (C) 2017 Zejiang Zeng - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the MIT license, please visit :
  https://github.com/zzjkf2009/Acme-Robotics-Project/blob/master/LICENSE
-*@brief This source file define a funtion of <WeightedAstar> calss
-*/
-
+ *@brief This source file define a funtion of <WeightedAstar> calss
+ */
 
 #include<stack>
 #include<set>
@@ -15,8 +14,6 @@
 #include"WeightedAstar.hpp"
 #include"Astar.hpp"
 #include<cmath>
-
-
 
 std::stack<Astar::coordinate> WeightedAstar::WeightedA(gridMatrix grid,
                                                        coordinate start,
@@ -64,16 +61,16 @@ std::stack<Astar::coordinate> WeightedAstar::WeightedA(gridMatrix grid,
   nodeinfo[i][j].parent_y = j;
   /*@ Create a open List which has the info of <F, <i,j>>
    where f=G+weight*H    */
-  std::set<Open_list> openList;
+  std::set < Open_list > openList;
   /* put start node into openList*/
   openList.insert(std::make_pair(0.0, std::make_pair(i, j)));
   bool foundGoal = false;
   while (!openList.empty()) {
-  Open_list p = *openList.begin();
-  for (const auto& n :openList) {
-    if (n.first < p.first)
+    Open_list p = *openList.begin();
+    for (const auto& n : openList) {
+      if (n.first < p.first)
         p = n;
-  }
+    }
     openList.erase(p);
     i = p.second.first;
     j = p.second.second;
@@ -84,7 +81,7 @@ std::stack<Astar::coordinate> WeightedAstar::WeightedA(gridMatrix grid,
     std::vector<int> sucessor_y = { -1, 0, 1 };
 // For every node near the current node, top, top-left, top-right, left, right,
 // bottom, bottom-left, bottom-right
-    std::stack<coordinate> PathOut;
+    std::stack < coordinate > PathOut;
     for (const auto& k : sucessor_x) {
       for (const auto& l : sucessor_y) {
         if (k == 0 && l == 0)
@@ -121,3 +118,4 @@ std::stack<Astar::coordinate> WeightedAstar::WeightedA(gridMatrix grid,
     printf(" Failed to find th goal node");
   return std::stack<Astar::coordinate>();
 }
+
