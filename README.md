@@ -1,7 +1,6 @@
 # Acme-Robotics-Project
 [![Build Status](https://travis-ci.org/zzjkf2009/Midterm_Astar.svg?branch=master)](https://travis-ci.org/zzjkf2009/Midterm_Astar)
-
-[![Coverage Status](https://coveralls.io/repos/github/zzjkf2009/Midterm Astar/badge.svg?branch=master)](https://coveralls.io/github/zzjkf2009/Midterm_Astar?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/zzjkf2009/Midterm_Astar/badge.svg)](https://coveralls.io/github/zzjkf2009/Midterm_Astar)
 
 
 ---
@@ -72,20 +71,24 @@ cd build
 ```
 If there is a path, the path image and video will be generate in build derectory, meanwhile the path will be printed on the screen. 
 
+* gridMap1:
+
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap1.gif)
+
+* gridMap2:
+
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap2.gif)
+
+* gridMap3:
+
+![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap3.gif)
 ---
 ## Test
-After the build process, run the demo Test program
+After the build process, run the unit test program, you will see the result of all tests
 run:
 ```
 ./build/test/cpp-test
 ```
-* gridMap1
-![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap1.gif)
-* gridMap2
-![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap2.gif)
-* gridMap3
-![](https://github.com/zzjkf2009/Midterm_Astar/blob/master/result/gridMap3.gif)
-
 ---
 ## Documentation
 follow the instruction below to generate doxygen documentation
@@ -123,3 +126,6 @@ This project is developed with the following tools:
 * Debugging (Valgrind)
 * Application library (OpenCV)
 * Build framework (cmake,GCC)
+---
+## Need To Do and Update:
+* There are some issues with the gmock and probably the way I use virtual class is not correct,  the actual funcion of the virtual funtion is never been called. (17/10/2017)
