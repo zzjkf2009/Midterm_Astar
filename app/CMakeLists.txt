@@ -1,4 +1,4 @@
-add_executable(shell-app main.cpp Astar.cpp Map.cpp WeightedAstar.cpp BuildingMap.cpp)
+add_executable(shell-app main.cpp Astar.cpp Map.cpp WeightedAstar.cpp BuildingMap.cpp dstar.cpp)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
     ${OpenCV_INCLUDE_DIRS}
